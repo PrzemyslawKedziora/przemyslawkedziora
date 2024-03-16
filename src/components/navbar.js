@@ -1,19 +1,34 @@
 import React, {useContext} from "react";
-import {ThemeContext} from "styled-components";
+import styled, {ThemeContext} from "styled-components";
 
+const NavContainer = styled.div`
+    background: ${({theme}) => theme.cardLight};
+    color: ${({theme}) => theme.textPrimary};
+    border-radius: 0 0 10px 10px;
+`;
 const Navbar = ({onThemeToggle}) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const theme = useContext(ThemeContext);
 
     return (
         <>
-            <div className="flex justify-between p-4">
-                <div>Przemysław Kędziora</div>
+            <NavContainer className="flex justify-between p-4 sticky top-0 z-10">
+                <div>
+                    <a href="#about">Przemysław Kędziora</a>
+                </div>
                 <div className="page-nav flex gap-x-[6vw]">
-                    <p>About</p>
-                    <p>Education</p>
-                    <p>Projects</p>
-                    <p>Contact</p>
+                    <p>
+                        <a href="#about">About Me</a>
+                    </p>
+                    <p>
+                    <a href="#education">Education</a>
+                    </p>
+                    <p>
+                    <a href="#projects">Projects</a>
+                    </p>
+                    <p>
+                        <a href="#contact">Contact</a>
+                    </p>
                 </div>
                 <div className="main-settings">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} onClick={onThemeToggle}
@@ -24,7 +39,7 @@ const Navbar = ({onThemeToggle}) => {
                     </svg>
 
                 </div>
-            </div>
+            </NavContainer>
         </>
     );
 };

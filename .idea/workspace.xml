@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="781de6e4-73ca-4c79-976a-aa970a828ca4" name="Changes" comment="Feat: implemented file structure &amp; styled contact form">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Education.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Projects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Themes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Education.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +34,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -51,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Node.js.App.js.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "D:/Projekty/przemyslawkedziora",
@@ -74,7 +71,8 @@
       <workItem from="1710431951707" duration="712000" />
       <workItem from="1710434069894" duration="1203000" />
       <workItem from="1710450741475" duration="12000" />
-      <workItem from="1710451698813" duration="5524000" />
+      <workItem from="1710451698813" duration="5924000" />
+      <workItem from="1710614370936" duration="6812000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,7 @@ function App() {
   return (
       <ThemeProvider theme={currentTheme}>
     <Body>
-      <Navbar/>
+      <Navbar onThemeToggle={toggleTheme} id='navbar'/>
         <Wrapper>
             <About/>
             <Education/>
