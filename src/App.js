@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import {useState} from "react";
 import {darkTheme, lightTheme} from "./utils/Themes";
 import styled, {ThemeProvider} from "styled-components";
-import About from "./components/About";
+import About from "./components/About/About";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";

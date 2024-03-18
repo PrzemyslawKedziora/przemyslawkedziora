@@ -1,8 +1,15 @@
 import styled from "styled-components";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import Timeline from "@mui/lab/Timeline";
+import * as React from "react";
 
 const ProjectCard = styled.div`
-        width: 12rem;
-        height: 8rem;
+        min-width: 12rem;
+        min-height: 8rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,20 +23,49 @@ const ProjectCard = styled.div`
                 transition: 0.3s ease-in-out;
         }
 `
-
-const ProjectsContainer = styled.div`
-`
-
 const Projects = () => {
     return(
         <>
+
             <h1>Projects</h1>
-           <ProjectsContainer id='projects' className="grid grid-cols-2 grid-rows-2 gap-4">
-                   <ProjectCard >Project</ProjectCard>
-                   <ProjectCard >Project</ProjectCard>
-                   <ProjectCard >Project</ProjectCard>
-                   <ProjectCard >Project</ProjectCard>
-           </ProjectsContainer>
+                   <Timeline position="right">
+                       <TimelineItem>
+                           <TimelineSeparator>
+                               <TimelineDot></TimelineDot>
+                               <TimelineConnector />
+                           </TimelineSeparator>
+                           <TimelineContent>
+                               <ProjectCard >Project</ProjectCard>
+                           </TimelineContent>
+                       </TimelineItem>
+                       <TimelineItem>
+                           <TimelineSeparator>
+                               <TimelineDot />
+                               <TimelineConnector />
+                           </TimelineSeparator>
+                           <TimelineContent>
+                               <ProjectCard >Project</ProjectCard>
+                           </TimelineContent>
+                       </TimelineItem>
+                       <TimelineItem>
+                           <TimelineSeparator>
+                               <TimelineDot />
+                               <TimelineConnector />
+                           </TimelineSeparator>
+                           <TimelineContent>
+                               <ProjectCard >Project</ProjectCard>
+                           </TimelineContent>
+                       </TimelineItem>
+                       <TimelineItem>
+                           <TimelineSeparator>
+                               <TimelineDot />
+                               <TimelineConnector />
+                           </TimelineSeparator>
+                           <TimelineContent>
+                               <ProjectCard >Project</ProjectCard>
+                           </TimelineContent>
+                       </TimelineItem>
+                   </Timeline>
         </>
     )
 }
