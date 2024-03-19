@@ -6,65 +6,70 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import Timeline from "@mui/lab/Timeline";
 import * as React from "react";
+import {projects} from "../assets/data";
+import {Link} from "react-router-dom";
+
 
 const ProjectCard = styled.div`
-        min-width: 12rem;
-        min-height: 8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1vh;
-        border-radius: 25px;
-        background-color: ${({theme}) => theme.cardLight};
-        color: ${({theme}) => theme.textPrimary};
+    width: 30rem;
+    height: 8rem;
+    text-wrap: normal;
+    margin-bottom: 1vh;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: transparent;
+    border: 1px solid ${({theme}) => theme.primary};
+    color: ${({theme}) => theme.textPrimary};
+    transition: 0.3s ease-in-out;
+    &:hover{
+        transform: translateY(-10%);
         transition: 0.3s ease-in-out;
-        &:hover{
-                transform: translateY(-10%);
-                transition: 0.3s ease-in-out;
-        }
+        cursor: pointer;
+    }
+    .desc{
+        color: ${({theme}) => theme.textSecondary};
+    }
 `
 const Projects = () => {
     return(
         <>
 
-            <h1>Projects</h1>
-                   <Timeline position="right">
-                       <TimelineItem>
-                           <TimelineSeparator>
-                               <TimelineDot></TimelineDot>
-                               <TimelineConnector />
-                           </TimelineSeparator>
-                           <TimelineContent>
-                               <ProjectCard >Project</ProjectCard>
-                           </TimelineContent>
-                       </TimelineItem>
-                       <TimelineItem>
-                           <TimelineSeparator>
-                               <TimelineDot />
-                               <TimelineConnector />
-                           </TimelineSeparator>
-                           <TimelineContent>
-                               <ProjectCard >Project</ProjectCard>
-                           </TimelineContent>
-                       </TimelineItem>
-                       <TimelineItem>
-                           <TimelineSeparator>
-                               <TimelineDot />
-                               <TimelineConnector />
-                           </TimelineSeparator>
-                           <TimelineContent>
-                               <ProjectCard >Project</ProjectCard>
-                           </TimelineContent>
-                       </TimelineItem>
-                       <TimelineItem>
-                           <TimelineSeparator>
-                               <TimelineDot />
-                               <TimelineConnector />
-                           </TimelineSeparator>
-                           <TimelineContent>
-                               <ProjectCard >Project</ProjectCard>
-                           </TimelineContent>
-                       </TimelineItem>
+            <h1 id="projects">Projects</h1>
+                   <Timeline className="flex items-start">
+                       {projects.map((project) => (
+                           <TimelineItem>
+                               <TimelineSeparator>
+                                   <TimelineDot style={{background: "transparent",
+                                                        border:"1px solid white"}}>
+                                       {<project.appLogoLink/>}
+                                   </TimelineDot>
+                                   <TimelineConnector />
+                               </TimelineSeparator>
+                               <TimelineContent sx={{ py: '20px', px: 2 }}>
+                                   <Link to={project.link} target="_blank">
+                                   <ProjectCard >
+                                       <div className="title">
+                                           {project.name}
+                                       </div>
+                                       <div className="desc">
+                                           {project.description}
+                                       </div>
+                                       <div className="technologies">
+                                           <b>
+                                               {"Used technologies: "}
+                                           </b>
+                                           {project.technologies.map((technology,index) => (
+                                               <span>
+                                                   {technology}{index !== project.technologies.length - 1 && ", "}
+                                               </span>
+                                           ))}
+                                       </div>
+                                   </ProjectCard>
+                                   </Link>
+                               </TimelineContent>
+                           </TimelineItem>
+                       ))}
                    </Timeline>
         </>
     )

@@ -1,3 +1,7 @@
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import ConnectingAirportsIcon from '@mui/icons-material/ConnectingAirports';
 export const aboutMe = {
     name: 'Przemysław',
     roles: [
@@ -22,3 +26,42 @@ export const education = [
         date: "Oct 2021 - at the moment",
     },
     ]
+
+export const projects = [
+    {
+        name: "Discord Music App",
+        description: "Lorem Ipsum",
+        appLogoLink: LibraryMusicIcon,
+        technologies: [
+            "Angular","Typescript","Javacript","Next.js","MongoDB","Node.js"
+        ],
+        link: "https://github.com/PrzemyslawKedziora/discord-music-app"
+    },
+    {
+        name: "Investment Portfolio",
+        description: "Lorem Ipsum",
+        appLogoLink: CurrencyBitcoinIcon,
+        technologies: [
+            "Angular","Typescript","Node.js","Firebase"
+        ],
+        link: "https://github.com/PrzemyslawKedziora/investment-portfolio-app"
+    },
+    {
+        name: "YourSavings",
+        description: "Lorem Ipsum",
+        appLogoLink: AccountBalanceWalletIcon,
+        technologies: [
+            "Angular","Typescript","Laravel","MySQL","Tailwind"
+        ],
+        link: "https://github.com/PrzemyslawKedziora/savings-app"
+    },
+    {
+        name: "PWPlanes",
+        description: "Lorem Ipsum",
+        appLogoLink: ConnectingAirportsIcon,
+        technologies: [
+            "Angular","Typescript","Firebase","Bootstrap"
+        ],
+        link: "https://github.com/PrzemyslawKedziora/PWPlanes"
+    }
+]

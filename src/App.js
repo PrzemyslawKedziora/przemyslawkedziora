@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import {useState} from "react";
 import {darkTheme, lightTheme} from "./utils/Themes";
 import styled, {ThemeProvider} from "styled-components";
+import { BrowserRouter } from 'react-router-dom'
 import About from "./components/About/About";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
@@ -35,16 +36,18 @@ function App() {
 
   return (
       <ThemeProvider theme={currentTheme}>
-    <Body>
-      <Navbar onThemeToggle={toggleTheme} id='navbar'/>
-        <Wrapper>
-            <About/>
-            <Education/>
-            <Projects/>
-            <Contact/>
-        </Wrapper>
-        <Footer/>
-    </Body>
+    <BrowserRouter>
+        <Body>
+            <Navbar onThemeToggle={toggleTheme} id='navbar'/>
+            <Wrapper>
+                <About/>
+                <Education/>
+                <Projects/>
+                <Contact/>
+            </Wrapper>
+            <Footer/>
+        </Body>
+    </BrowserRouter>
       </ThemeProvider>
   );
 }
