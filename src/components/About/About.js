@@ -10,19 +10,19 @@ import {
     TextLoop,
     Title
 } from "./AboutSectionStyle";
-import l6d from "../../assets/l6d.jpg"
+import l6d from "../../assets/l6d.jpg";
 import Typewriter from 'typewriter-effect';
 
 const About = () => {
     return(
         <>
             <div id='about' className="w-full"
-
             >
                 <PersonContainer>
                     <PersonInnerContainer>
                         <PersonLeftDataContainer>
-                            <Title>Hi, I am <br/>
+                            <Title>Hi, I am
+                                <br/>
                                 {aboutMe.name}
                             </Title>
                             <TextLoop>

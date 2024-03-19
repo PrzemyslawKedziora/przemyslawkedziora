@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
 
     const [currentTheme, setCurrentTheme] = useState(darkTheme);
@@ -26,7 +27,7 @@ function App() {
         flex-wrap: wrap;
         background: linear-gradient(38.73deg, ${({theme}) => theme.cardLight} 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(201, 32, 184, 0) 50%, ${({theme}) => theme.cardLight} 100%);
         width: 100%;
-         clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
     `
     const toggleTheme = () => {
       setCurrentTheme((prevTheme) => (prevTheme === lightTheme ? darkTheme : lightTheme));
@@ -42,6 +43,7 @@ function App() {
             <Projects/>
             <Contact/>
         </Wrapper>
+        <Footer/>
     </Body>
       </ThemeProvider>
   );

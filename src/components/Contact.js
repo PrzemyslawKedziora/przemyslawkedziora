@@ -3,6 +3,7 @@ import React from "react";
 
 const ContactContainer = styled.div`
     background-color: ${({theme}) => theme.background};
+    margin-bottom: 4rem;
 `;
 
 const ContactInput = styled.input`
