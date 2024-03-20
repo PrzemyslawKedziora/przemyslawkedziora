@@ -1,7 +1,7 @@
 #about,#education,#projects,#contact{
-    scroll-margin-top: 10vh;
+    scroll-margin-top: 8vh;
 }
 h1{
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem 0;
 }

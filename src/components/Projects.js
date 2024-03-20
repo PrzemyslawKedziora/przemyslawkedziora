@@ -9,7 +9,9 @@ import * as React from "react";
 import {projects} from "../assets/data";
 import {Link} from "react-router-dom";
 
-
+const ProjectContainer = styled.div`
+    height: 100vh;
+`
 const ProjectCard = styled.div`
     width: 30rem;
     height: 8rem;
@@ -34,43 +36,46 @@ const ProjectCard = styled.div`
 const Projects = () => {
     return(
         <>
-
-            <h1 id="projects">Projects</h1>
-                   <Timeline className="flex items-start">
-                       {projects.map((project) => (
-                           <TimelineItem>
-                               <TimelineSeparator>
-                                   <TimelineDot style={{background: "transparent",
-                                                        border:"1px solid white"}}>
-                                       {<project.appLogoLink/>}
-                                   </TimelineDot>
-                                   <TimelineConnector />
-                               </TimelineSeparator>
-                               <TimelineContent sx={{ py: '20px', px: 2 }}>
-                                   <Link to={project.link} target="_blank">
-                                   <ProjectCard >
-                                       <div className="title">
-                                           {project.name}
-                                       </div>
-                                       <div className="desc">
-                                           {project.description}
-                                       </div>
-                                       <div className="technologies">
-                                           <b>
-                                               {"Used technologies: "}
-                                           </b>
-                                           {project.technologies.map((technology,index) => (
-                                               <span>
+            <ProjectContainer>
+                <h1 id="projects" className="text-center">Projects</h1>
+                <Timeline className="flex items-start">
+                    {projects.map((project) => (
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot style={{
+                                    background: "transparent",
+                                    border: "1px solid white"
+                                }}>
+                                    {<project.appLogoLink/>}
+                                </TimelineDot>
+                                <TimelineConnector/>
+                            </TimelineSeparator>
+                            <TimelineContent sx={{py: '20px', px: 2}}>
+                                <Link to={project.link} target="_blank">
+                                    <ProjectCard>
+                                        <div className="title">
+                                            {project.name}
+                                        </div>
+                                        <div className="desc">
+                                            {project.description}
+                                        </div>
+                                        <div className="technologies">
+                                            <b>
+                                                {"Used technologies: "}
+                                            </b>
+                                            {project.technologies.map((technology, index) => (
+                                                <span>
                                                    {technology}{index !== project.technologies.length - 1 && ", "}
                                                </span>
-                                           ))}
-                                       </div>
-                                   </ProjectCard>
-                                   </Link>
-                               </TimelineContent>
-                           </TimelineItem>
-                       ))}
-                   </Timeline>
+                                            ))}
+                                        </div>
+                                    </ProjectCard>
+                                </Link>
+                            </TimelineContent>
+                        </TimelineItem>
+                    ))}
+                </Timeline>
+            </ProjectContainer>
         </>
     )
 }

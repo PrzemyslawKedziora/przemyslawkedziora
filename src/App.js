@@ -39,9 +39,11 @@ function App() {
     <BrowserRouter>
         <Body>
             <Navbar onThemeToggle={toggleTheme} id='navbar'/>
-            <Wrapper>
                 <About/>
+            <Wrapper>
                 <Education/>
+            </Wrapper>
+            <Wrapper>
                 <Projects/>
                 <Contact/>
             </Wrapper>

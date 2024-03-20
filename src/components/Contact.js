@@ -3,13 +3,18 @@ import React from "react";
 
 const ContactContainer = styled.div`
     background-color: ${({theme}) => theme.background};
-    margin-bottom: 4rem;
+    margin: 4rem 0;
+    width: 30%;
+    -webkit-box-shadow: 0 0 20px 2px ${({theme}) => theme.cardLight};;
+    -moz-box-shadow: 0 0 20px 2px ${({theme}) => theme.cardLight};;
+    box-shadow: 0 0 20px 2px ${({theme}) => theme.button};
 `;
 
 const ContactInput = styled.input`
     background-color: transparent;
     border: 2px solid ${({theme}) => theme.textSecondary};
     outline: none;
+    width: 90%;
     font-size: 18px;
     color: ${({theme}) => theme.textPrimary};
     border-radius: 12px;
@@ -24,6 +29,7 @@ const ContactInput = styled.input`
 const ContactArea = styled.textarea`
     background: transparent;
     outline: none;
+    width: 90%;
     border: 2px solid ${({theme}) => theme.textSecondary};
     color: ${({theme}) => theme.textPrimary};
     font-size: 18px;
