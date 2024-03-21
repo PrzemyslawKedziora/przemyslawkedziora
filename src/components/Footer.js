@@ -5,6 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import about from "./About/About";
 import {aboutMe} from "../assets/data";
+import {ListItem} from "./navbar";
+
 
 const FooterContainer = styled.div`
     display: flex;
@@ -33,18 +35,18 @@ const Footer = () =>{
         <>
         <FooterContainer>
             <NavContainer>
-                <p>
+                <ListItem>
                     <a href="#about">About Me</a>
-                </p>
-                <p>
+                </ListItem>
+                <ListItem>
                     <a href="#education">Education</a>
-                </p>
-                <p>
+                </ListItem>
+                <ListItem>
                     <a href="#projects">Projects</a>
-                </p>
-                <p>
+                </ListItem>
+                <ListItem>
                     <a href="#contact">Contact</a>
-                </p>
+                </ListItem>
             </NavContainer>
             <div>
                 <p target="display">
@@ -58,9 +60,9 @@ const Footer = () =>{
                 </p>
             </div>
             <div className="icons flex gap-x-6 mb-4">
-                <Icon href={aboutMe.mailingLink}>
-                    <EmailIcon style={{width: '37px', height: '37px'}}/>
-                </Icon>
+                   <Icon href={aboutMe.mailingLink}>
+                       <EmailIcon style={{width: '37px', height: '37px'}}/>
+                   </Icon>
                 <Icon href={aboutMe.githubLink}>
                     <GitHubIcon style={{width: '37px', height: '37px'}}/>
                 </Icon>

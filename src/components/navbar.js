@@ -12,7 +12,12 @@ const ThemeSwitch = styled.div`
         cursor: pointer;
         transition: 0.2s ease-in-out;
     }
-`
+`;
+export const ListItem = styled.p`
+    transition: 0.3s ease-in-out;
+    &:hover{
+        color: ${({theme}) => theme.primary};
+}`
 const Navbar = ({onThemeToggle}) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const theme = useContext(ThemeContext);
@@ -24,18 +29,18 @@ const Navbar = ({onThemeToggle}) => {
                     <a href="#about">Przemysław Kędziora</a>
                 </div>
                 <div className="page-nav flex items-center gap-x-[6vw]">
-                    <p>
+                    <ListItem>
                         <a href="#about">About Me</a>
-                    </p>
-                    <p>
+                    </ListItem>
+                    <ListItem>
                     <a href="#education">Education</a>
-                    </p>
-                    <p>
+                    </ListItem>
+                    <ListItem>
                     <a href="#projects">Projects</a>
-                    </p>
-                    <p>
+                    </ListItem>
+                    <ListItem>
                         <a href="#contact">Contact</a>
-                    </p>
+                    </ListItem>
                 </div>
                 <ThemeSwitch>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} onClick={onThemeToggle}
