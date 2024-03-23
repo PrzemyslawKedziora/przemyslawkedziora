@@ -30,38 +30,52 @@ export const education = [
 export const projects = [
     {
         name: "Discord Music App",
-        description: "Lorem Ipsum",
+        description: "Application projected to store your favourite music.Users are able to manage songs,create playlists etc." +
+            "Songs are added through YoutubeAPI.",
         appLogoLink: LibraryMusicIcon,
         technologies: [
             "Angular","Typescript","Javacript","Next.js","MongoDB","Node.js"
         ],
-        link: "https://github.com/PrzemyslawKedziora/discord-music-app"
+        repository: "https://github.com/PrzemyslawKedziora/discord-music-app",
+        demo: "https://discord-music-app-frontend.vercel.app/"
     },
     {
         name: "Investment Portfolio",
-        description: "Lorem Ipsum",
+        description: "An application enabling user to track his cryptocurrency investment history. " +
+            "User can manage their investment portfolios by adding or removing investment data." +
+            "Through the portfolio, users can also check the current prices of individual assets." +
+            "User can also check the status of their investment portfolio thanks to charts data visualizations.",
         appLogoLink: CurrencyBitcoinIcon,
         technologies: [
             "Angular","Typescript","Node.js","Firebase"
         ],
-        link: "https://github.com/PrzemyslawKedziora/investment-portfolio-app"
+        repository: "https://github.com/PrzemyslawKedziora/investment-portfolio-app",
+        demo: "https://przemyslawkedziora.github.io/investment-portfolio-app"
     },
     {
         name: "YourSavings",
-        description: "Lorem Ipsum",
+        description: "The application allows users to monitor their expenses by entering categorized expenditures" +
+            "and displaying the current balance of the user's account. " +
+            "Users can input various types of expenses, categorize them, and track their spending over time," +
+            "providing insights into their financial habits and helping them manage their budget effectively.",
         appLogoLink: AccountBalanceWalletIcon,
         technologies: [
             "Angular","Typescript","Laravel","MySQL","Tailwind"
         ],
-        link: "https://github.com/PrzemyslawKedziora/savings-app"
+        repository: "https://github.com/PrzemyslawKedziora/savings-app",
+        demo: "https://github.com/PrzemyslawKedziora/savings-app"
     },
     {
         name: "PWPlanes",
-        description: "Lorem Ipsum",
+        description: "An Angular-based application for managing flights, " +
+            "enabling users to dynamically add and modify flights, as well as manage flight and crew data. " +
+            "By leveraging the Firebase database, the application ensures fast and reliable access to stored information, " +
+            "facilitating easy management of aircraft flights.",
         appLogoLink: ConnectingAirportsIcon,
         technologies: [
             "Angular","Typescript","Firebase","Bootstrap"
         ],
-        link: "https://github.com/PrzemyslawKedziora/PWPlanes"
+        repository: "https://github.com/PrzemyslawKedziora/PWPlanes",
+        demo: "https://przemyslawkedziora.github.io/PWPlanes"
     }
 ]

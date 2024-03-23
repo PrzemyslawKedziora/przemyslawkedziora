@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {ThemeContext} from "styled-components";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineDot from "@mui/lab/TimelineDot";
@@ -9,6 +9,7 @@ import * as React from "react";
 import {projects} from "../assets/data";
 import {Link} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
+import {useContext} from "react";
 
 const ProjectContainer = styled.div`
     width: 90%;
@@ -35,7 +36,8 @@ const ProjectCard = styled.div`
 
 const ProjectCardActions = styled.div`
     display: none;
-    transition: 0.3s ease-in-out;
+    transition:backdrop-filter 2s;
+    backdrop-filter: blur(0px);
     ${ProjectCard}:hover & {
         display: flex;
         justify-content: space-around;
@@ -48,7 +50,7 @@ const ProjectCardActions = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: backdrop-filter 0.2s;
+        transition: backdrop-filter 2s;
         backdrop-filter: blur(5px);
     }
     button{
@@ -67,6 +69,7 @@ const ProjectCardActions = styled.div`
 `
 const Projects = () => {
 
+    const theme = useContext(ThemeContext);
     const [refTitle, inViewTitle] = useInView({
         triggerOnce: true,
         threshold: 1
@@ -82,9 +85,10 @@ const Projects = () => {
                     {projects.map((project) => (
                         <TimelineItem >
                             <TimelineSeparator>
-                                <TimelineDot style={{
+                                <TimelineDot sx={{
                                     background: "transparent",
-                                    border: "1px solid white"
+                                    border: `1px solid ${theme.textPrimary}`,
+                                    color: theme.textPrimary
                                 }}>
                                     {<project.appLogoLink/>}
                                 </TimelineDot>
