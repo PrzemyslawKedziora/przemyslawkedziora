@@ -52,7 +52,7 @@ const ProjectCardActions = styled.div`
         backdrop-filter: blur(5px);
     }
     button{
-        background: ${({theme}) => theme.button};
+        background: ${({theme}) => theme.primary};
         color: ${({theme}) => theme.background};
         border-radius: 0.75rem;
         width: 8rem;
