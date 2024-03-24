@@ -9,7 +9,7 @@ const EducationContainer = styled.div`
     flex-direction: column;
     min-height: 95vh;
     position: relative;
-    padding: 80px 230px;
+    padding: 80px 24rem;
     text-align: center;
     font-size: 20px;
     @media (max-width: 960px) {
@@ -23,14 +23,18 @@ const EducationContainer = styled.div`
 
 const EducationCard = styled.div`
     display: flex;
+    width: 50%;
     margin-top: 50px;
     background-color: transparent;
     justify-content: space-between;
     padding: 20px;
-    width: 40%;
     border: 1px solid ${({theme}) => theme.primary};
     border-radius: 10px;
     color: ${({theme}) => theme.textPrimary};
+    @media (max-width: 960px) {
+        padding: 66px 16px;
+        width: 90%;
+    }
 
 `
 const EducationSecondText = styled.div`
@@ -68,22 +72,22 @@ const Education = () => {
                        {aboutMe.educationDesc}
                    </p>
                 </div>
-                                <EducationCard>
-                                    <Img src={education.img} alt="image"/>
-                                    <div className="flex flex-col justify-between">
-                                        <div>
-                                            {education.university}
-                                        </div>
-                                        <EducationSecondText>
-                                            <p>
-                                                {education.degree}
-                                            </p>
-                                            <p style={{fontSize:"12px"}}>
-                                                {education.date}
-                                            </p>
-                                        </EducationSecondText>
-                                    </div>
-                                </EducationCard>
+                <EducationCard>
+                    <Img src={education.img} alt="image"/>
+                    <div className="flex flex-col justify-between">
+                        <div>
+                            {education.university}
+                        </div>
+                        <EducationSecondText>
+                            <p>
+                                {education.degree}
+                            </p>
+                            <p style={{fontSize:"12px"}}>
+                                {education.date}
+                            </p>
+                        </EducationSecondText>
+                    </div>
+                </EducationCard>
             </EducationContainer>
         </>
     )

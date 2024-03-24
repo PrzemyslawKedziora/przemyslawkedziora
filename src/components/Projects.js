@@ -36,7 +36,6 @@ const ProjectCard = styled.div`
 
 const ProjectCardActions = styled.div`
     display: none;
-    transition:backdrop-filter 2s;
     backdrop-filter: blur(0px);
     ${ProjectCard}:hover & {
         display: flex;
@@ -50,7 +49,6 @@ const ProjectCardActions = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: backdrop-filter 2s;
         backdrop-filter: blur(5px);
     }
     button{
@@ -71,6 +69,10 @@ const Projects = () => {
 
     const theme = useContext(ThemeContext);
     const [refTitle, inViewTitle] = useInView({
+        triggerOnce: false,
+        threshold: 1
+    });
+    const inViewContent = useInView({
         triggerOnce: true,
         threshold: 1
     });
@@ -81,7 +83,7 @@ const Projects = () => {
                 <h1 id="projects" className="text-center" ref={refTitle}
                     style={{opacity: inViewTitle ? 1 : 0, transition: 'opacity 0.8s ease-out'}}>Projects</h1>
                 <Timeline position="alternate"
-                          style={{opacity: inViewTitle ? 1 : 0, transition: 'opacity 1s ease-out', transitionDelay: "250ms"}}>
+                          style={{opacity: inViewContent ? 1 : 0, transition: 'opacity 1s ease-out', transitionDelay: "250ms"}}>
                     {projects.map((project) => (
                         <TimelineItem >
                             <TimelineSeparator>
