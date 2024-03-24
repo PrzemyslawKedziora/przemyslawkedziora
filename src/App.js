@@ -17,8 +17,6 @@ function App() {
       background-color: ${({theme}) => theme.background};
       color: ${({theme}) => theme.textPrimary};
       width: 100%;
-      height: 100vh;
-      overflow-x: hidden;
     `
     const Wrapper = styled.div`
         display: flex;
@@ -30,26 +28,28 @@ function App() {
         width: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
     `
-    const toggleTheme = () => {
+    const toggleTheme = (event) => {
+        event.preventDefault();
+
       setCurrentTheme((prevTheme) => (prevTheme === lightTheme ? darkTheme : lightTheme));
     }
 
   return (
       <ThemeProvider theme={currentTheme}>
     <BrowserRouter>
-        <Body>
-            <Navbar onThemeToggle={toggleTheme} id='navbar'/>
-                <About/>
-            <Wrapper>
-                <Education/>
-            </Wrapper>
-            <Wrapper>
-                <Projects/>
-                <Contact/>
-            </Wrapper>
-            <Footer/>
-        </Body>
-    </BrowserRouter>
+            <Body>
+                <Navbar onThemeToggle={toggleTheme}/>
+                    <About/>
+                <Wrapper>
+                    <Education/>
+                </Wrapper>
+                <Wrapper>
+                    <Projects/>
+                    <Contact/>
+                </Wrapper>
+                <Footer/>
+            </Body>
+        </BrowserRouter>
       </ThemeProvider>
   );
 }
