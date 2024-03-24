@@ -14,18 +14,20 @@ export const aboutMe = {
         "I have strong organizational skills and demonstrate responsibility, proactivity and resilience in my work. " +
         "I have a great ability to adapt to new challenges. I like to analyze problems and evaluate different solutions. " +
         "I believe that organization is very important in order to achieve personal goals in most efficient way.",
+    educationDesc: "My educational journey has been a constant exploration of self-knowledge and personal growth. " +
+        "Each institution and course I have been through has contributed not only to my academic development, " +
+        "but also deeper understanding of the world around me. " +
+        "Below are the specific details of my academic background.\n",
     githubLink: "https://github.com/PrzemyslawKedziora",
     linkedinLink: "https://www.linkedin.com/in/przemyslawkedziora/",
     mailingLink: "mailto:pkedziora347@gmail.com"
 }
-export const education = [
-    {
+export const education = {
         img: "sygnet_pl.jpg",
         university: "Lublin University of Technology",
-        degree: "Bachelor Degree, Software Engineering",
+        degree: "Bachelor Degree, Computer Science",
         date: "Oct 2021 - at the moment",
-    },
-    ]
+    }
 
 export const projects = [
     {
