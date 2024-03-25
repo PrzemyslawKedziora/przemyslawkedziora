@@ -6,6 +6,8 @@ const NavContainer = styled.div`
     background: ${({theme}) => theme.cardLight};
     color: ${({theme}) => theme.textPrimary};
     font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 `;
 const ThemeSwitch = styled.button`
     background: none;
@@ -79,6 +81,7 @@ const NavItems = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 24px;
   gap: 32px;
   list-style: none;
   @media screen and (max-width: 900px) {
@@ -103,10 +106,10 @@ const Navbar = ({onThemeToggle}) => {
                     </span>
                 </MobileIcon>
                 <NavItems>
-                        <ListItem href="#about">About Me</ListItem>
+                    <ListItem href="#about">About Me</ListItem>
                     <ListItem href="#education">Education</ListItem>
                     <ListItem href="#projects">Projects</ListItem>
-                        <ListItem href="#contact">Contact</ListItem>
+                    <ListItem href="#contact">Contact</ListItem>
                 </NavItems>
                 <ThemeSwitch>
                         <SwitchIcon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} onClick={onThemeToggle}
