@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/przemyslawkedziora/static/css/main.988c2777.css",
-    "main.js": "/przemyslawkedziora/static/js/main.49abc452.js",
+    "main.js": "/przemyslawkedziora/static/js/main.c5010de7.js",
     "static/js/453.54b34be1.chunk.js": "/przemyslawkedziora/static/js/453.54b34be1.chunk.js",
     "static/media/l6d.jpg": "/przemyslawkedziora/static/media/l6d.7a7ebf5b20480ba64f82.jpg",
     "index.html": "/przemyslawkedziora/index.html",
     "main.988c2777.css.map": "/przemyslawkedziora/static/css/main.988c2777.css.map",
-    "main.49abc452.js.map": "/przemyslawkedziora/static/js/main.49abc452.js.map",
+    "main.c5010de7.js.map": "/przemyslawkedziora/static/js/main.c5010de7.js.map",
     "453.54b34be1.chunk.js.map": "/przemyslawkedziora/static/js/453.54b34be1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.988c2777.css",
-    "static/js/main.49abc452.js"
+    "static/js/main.c5010de7.js"
   ]
 }
