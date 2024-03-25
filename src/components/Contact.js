@@ -82,6 +82,7 @@ const Contact = () => {
             })
             .then(
                 () => {
+                    document.getElementById('contactForm').reset();
                     console.log('SUCCESS!',{name,email,message});
                 },
                 (error) => {
@@ -93,7 +94,7 @@ const Contact = () => {
         <>
             <ContactContainer className="mb-4 px-8 py-4 rounded-lg" id='contact'>
                 <p className="text-center my-4 text-xl">Feel free to contact me!</p>
-                    <form className="flex flex-col items-center justify-center gap-y-4" ref={form} onSubmit={sendEmail}>
+                    <form className="flex flex-col items-center justify-center gap-y-4" ref={form} onSubmit={sendEmail} id="contactForm">
                         <ContactInput className="rounded-xl p-2" type="text" name="email" placeholder="Email..."
                                       onChange={(email)=>setEmail(email.target.value)}/>
                         <ContactInput className="rounded-xl p-2" type="text" name="name" placeholder="Name..."
