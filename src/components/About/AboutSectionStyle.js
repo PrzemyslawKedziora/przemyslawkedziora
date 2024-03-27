@@ -48,7 +48,20 @@ export const PersonLeftDataContainer = styled.div`
     align-items: center;
   }
 `;
-
+export const PersonCVButton = styled.button`
+    min-width: 15rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 25px;
+    background: linear-gradient(31deg, ${({theme}) => theme.primary} 0%, #5BAECEFF 47%, ${({theme}) => theme.cardLight} 105%);
+    color: #F2F3F4;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+    
+`
 export const PersonRightDataContainer = styled.div`
   width: 100%;
   display: flex;

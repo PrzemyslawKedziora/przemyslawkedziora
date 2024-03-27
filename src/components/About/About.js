@@ -5,6 +5,7 @@ import {
     PersonInnerContainer,
     PersonLeftDataContainer,
     PersonRightDataContainer,
+    PersonCVButton,
     Span,
     SubTitle,
     TextLoop,
@@ -37,6 +38,12 @@ const About = () => {
                                 </Span>
                             </TextLoop>
                             <SubTitle>{aboutMe.description}</SubTitle>
+                            <PersonCVButton >
+                                <a target="_blank"
+                                    href="https://drive.google.com/file/d/1bqu9xMblkLfc_HsM8NENUcK-S3vXV6HX/view?usp=sharing">
+                                    Check CV
+                                </a>
+                                </PersonCVButton>
                         </PersonLeftDataContainer>
                         <PersonRightDataContainer>
                             <Img src={l6d} alt='Profile Picture'/>
